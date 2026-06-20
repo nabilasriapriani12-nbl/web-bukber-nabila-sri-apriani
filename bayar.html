@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Bukber-Nabila Sri Apriani</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+
+
+</head>
+
+<body class="bg-halaman-bayar">
+    <div class="d-flex justify-content-center mt-5"> 
+        
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <a href="index.html" class="btn btn-success">HOME</a>
+            <a href="voting.html" class="btn btn-success">VOTING</a>
+            <a href="jadwal.html" class="btn btn-success">JADWAL</a>
+            <a href="menu.html" class="btn btn-success">MENU</a>
+            <a href="bayar.html" class="btn btn-success">BAYAR</a>
+            <a href="galeri.html" class="btn btn-success">GALERI</a>
+            <a href="kontak.html" class="btn btn-success">KONTAK</a>
+        </div>
+
+    </div>
+
+
+    <div class="container my-5 d-flex justify-content-center">
+        <div class="card p-4 shadow-lg text-center" style="max-width: 600px; width: 100%; background-color: #ffffff; border: 3px solid #d9a752; border-radius: 25px;">
+            
+            <div id="box-rincian-utama" style="display: block;">
+                <h4 class="fw-bold mb-3" style="color: #0f3424;">RINCIAN PEMBAYARAN</h4>
+                
+                <div id="rincian-list" class="p-3 mb-3 border border-secondary rounded bg-light text-start" style="max-height: 200px; overflow-y: auto;">
+                    </div>
+
+                <div class="d-flex justify-content-between align-items-center p-3 mb-4 rounded" style="background-color: #0f3424; color: #ffffff;">
+                    <span class="fw-bold">TOTAL PEMBAYARAN :</span>
+                    <h4 id="total-pembayaran" class="fw-bold m-0" style="color: #d9a752;">Rp 0</h4>
+                </div>
+
+                <button class="btn btn-warning btn-lg w-100 fw-bold text-white shadow mb-4" onclick="tampilkanHalamanMetode()" style="background-color: #d9a752; border-color: #d9a752;">
+                    PILIH METODE PEMBAYARAN
+                </button>
+            </div>
+
+            <div id="box-metode-upload" style="display: none;">
+                <h4 class="fw-bold mb-3" style="color: #0f3424;">METODE PEMBAYARAN</h4>
+                
+                <div class="p-3 mb-2 border border-secondary rounded text-start bg-light position-relative">
+                    <div class="fw-bold text-success"></i> BANK SYARIAH INDONESIA (BSI)</div>
+                    <div class="fs-5 fw-bold text-dark mt-1">7145263189</div>
+                    <div class="small text-muted">a.n Nabila Sri Apriani</div>
+                    <button class="btn btn-sm btn-outline-secondary position-absolute end-0 top-50 translate-middle-y me-3" onclick="salinTeks('7145263189')">
+                        <i class="bi bi-copy"></i> Salin
+                    </button>
+                </div>
+
+                <div class="p-3 mb-2 border border-secondary rounded text-start bg-light position-relative">
+                    <div class="fw-bold" style="color: #8c2d19;"></i> BANK ACEH</div>
+                    <div class="fs-5 fw-bold text-dark mt-1">01002410065432</div>
+                    <div class="small text-muted">a.n Nabila Sri Apriani</div>
+                    <button class="btn btn-sm btn-outline-secondary position-absolute end-0 top-50 translate-middle-y me-3" onclick="salinTeks('01002410065432')">
+                        <i class="bi bi-copy"></i> Salin
+                    </button>
+                </div>
+
+                <div class="p-3 mb-3 border border-secondary rounded text-start bg-light position-relative">
+                    <div class="fw-bold text-primary"></i>DANA</div>
+                    <div class="fs-5 fw-bold text-dark mt-1">082274193554</div>
+                    <div class="small text-muted">a.n Nabila Sri Apriani</div>
+                    <button class="btn btn-sm btn-outline-secondary position-absolute end-0 top-50 translate-middle-y me-3" onclick="salinTeks('082274193554')">
+                        <i class="bi bi-copy"></i> Salin
+                    </button>
+                </div>
+
+                <div class="mb-4 text-start">
+                    <label for="input-file-bukti" class="form-label fw-bold" style="color: #0f3424;"><i class="bi bi-upload"></i> Upload Bukti Transfer :</label>
+                    <input class="form-control border-dark" type="file" id="input-file-bukti" accept="image/*">
+                </div>
+
+                <div class="d-flex gap-2 mb-4">
+                    <button class="btn btn-secondary w-50 fw-bold" onclick="kembaliKeRincian()">KEMBALI</button>
+                    <button class="btn btn-success w-50 fw-bold" onclick="kirimKonfirmasi()">KIRIM CONFIRM</button>
+                </div>
+            </div>
+
+            <div class="mt-2 border-top pt-3">
+                <button id="badge-status" class="btn bg-danger text-white fw-bold px-5 py-2 rounded-pill text-uppercase btn-sm shadow-sm" onclick="konfirmasiOlehPanitia()">
+                    STATUS : BELUM LUNAS
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

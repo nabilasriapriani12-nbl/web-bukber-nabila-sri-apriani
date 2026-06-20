@@ -1,0 +1,209 @@
+body {
+    background-color: #0f3424; 
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+body.bg-home-khusus {
+    background-color: transparent !important;
+}
+
+body.bg-halaman-voting,
+body.bg-halaman-jadwal,
+body.bg-halaman-menu,
+body.bg-halaman-bayar,
+body.bg-halaman-kontak,
+body.bg-halaman-galeri,
+body.bg-halaman-review  {
+    background-image: url('../bg_baru.jpeg') !important; 
+
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-color: transparent !important; 
+}
+
+
+.bg-ramadan {
+    background-color: #0f3424 !important;
+}
+
+.border-gold {
+    border: 2px solid #d9a752 !important;
+}
+
+.text-gold {
+    color: #d9a752 !important;
+}
+
+.btn-gold {
+    background-color: #d9a752;
+    color: #0f3424;
+    border: 2px solid #fff;
+    transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+    background-color: #fff;
+    color: #0f3424;
+    border-color: #d9a752;
+    box-shadow: 0 4px 15px rgba(217, 167, 82, 0.4);
+}
+
+
+.voting-section-title {
+    background-color: #d9a752;
+    color: #0f3424;
+    font-weight: bold;
+    padding: 8px 20px;
+    border: 2px solid #fff;
+    display: inline-block;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.custom-card {
+    background-color: rgba(255, 255, 255, 0.85); 
+    border: 2px solid #d9a752;
+    border-radius: 20px;
+    color: #0f3424;
+    transition: transform 0.2s;
+}
+
+.custom-card:hover {
+    transform: scale(1.03); 
+}
+
+.card-title-custom {
+    font-weight: bold;
+    font-size: 1.1rem;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-review {
+    max-width: 700px;
+    border: 3px solid #d9a752;
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.btn-kembali {
+    background-color: #d9a752;
+    color: #0f3424;
+    font-weight: bold;
+    padding: 8px 16px;
+    border: 2px solid #fff;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.btn-kembali:hover {
+    background-color: #fff;
+    color: #0f3424;
+    border-color: #d9a752;
+}
+
+.carousel-inner img {
+    height: 320px;
+    object-fit: cover;
+}
+
+.bg-light-custom {
+    background-color: #fcf6e8 !important;
+}
+
+.carousel-caption h5 {
+    font-weight: bold;
+    color: #d9a752 !important;
+}
+
+.badge-menu-bulat {
+    background-color: #0f3424;
+    color: #fff;
+    border: 2px solid #d9a752;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+*
+/* ====menu === */
+.rounded-4 {
+    border-radius: 15px !important;
+}
+
+.box-rincian {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid #6c757d;
+    border-radius: 15px;
+}
+
+.status-badge {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    transition: all 0.5s ease;
+}
+
+
+/* ===== galeri===== */
+.img-galeri-bulat {
+    border-radius: 15px !important; 
+    height: 180px; 
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.img-galeri-bulat:hover {
+    transform: scale(1.03);
+}
+
+/* ===== responsif ===== */
+@media (max-width: 768px) {
+    
+    body.bg-halaman-voting,
+    body.bg-halaman-jadwal,
+    body.bg-halaman-menu,
+    body.bg-halaman-bayar,
+    body.bg-halaman-kontak,
+    body.bg-halaman-galeri,
+    body.bg-halaman-review,
+    body {
+        
+        background-size: cover !important; 
+        background-position: center center !important; 
+        background-attachment: fixed !important; 
+        background-repeat: no-repeat !important;
+    }
+
+    /* biar menu horizontal*/
+    .btn-group {
+        display: flex !important;
+        flex-direction: row !important; 
+        width: 100% !important;
+        padding: 0 5px; 
+        z-index: 9999 !important; 
+    }
+
+    /* biar menu menyesuaikan dgn hp */
+    .btn-group .btn {
+        font-size: 8.5px !important; 
+        padding: 6px 2px !important; 
+        white-space: nowrap; 
+        margin-bottom: 0px !important;
+    }
+
+    /* Jarak vertikal tombol menu dengan konten di bawahnya */
+    .d-flex.justify-content-center.mt-5.mb-4 {
+        margin-top: 15px !important;
+        margin-bottom: 25px !important; 
+    }
+}
